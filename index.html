@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audira</title>
+    <!-- set the theme before first paint so there's no flash of the wrong theme -->
+    <script>
+      (function () {
+        var stored = localStorage.getItem('audira-theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    
+    <header class="w-full">
+      <nav>
+        <div class="logo" role="img" aria-label="Audira"></div>
+        <div class="nav-actions">
+          <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4.5"/>
+              <line x1="12" y1="2.5" x2="12" y2="5"/>
+              <line x1="12" y1="19" x2="12" y2="21.5"/>
+              <line x1="2.5" y1="12" x2="5" y2="12"/>
+              <line x1="19" y1="12" x2="21.5" y2="12"/>
+              <line x1="4.9" y1="4.9" x2="6.6" y2="6.6"/>
+              <line x1="17.4" y1="17.4" x2="19.1" y2="19.1"/>
+              <line x1="4.9" y1="19.1" x2="6.6" y2="17.4"/>
+              <line x1="17.4" y1="6.6" x2="19.1" y2="4.9"/>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/>
+            </svg>
+          </button>
+          <a href="#" class="btn">
+            <span>Buy Now</span>
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <div id="smooth-wrapper"> <!-- required for ScrollSmoother -->
+      <div id="smooth-content">
+        <div id="main" class="w-full">
+          <img src="./assets/images/red.png" alt="" srcset="" id="headphone">
+
+          <div id="section1">
+            <h1 class="heading">Modern Harmony</h1>
+          </div>
+
+          <div id="section2">
+            <div class="content-wrapper">
+              <div class="kicker">The Sound</div>
+              <h2 class="heading heading-underline">True Clarity</h2>
+              <p><strong>Hand-tuned 40mm drivers</strong> and a sealed acoustic
+                chamber mean nothing gets smeared when the mix gets busy —
+                vocals stay forward, bass stays controlled, and the rest just
+                gets out of the way.</p>
+                <a href="" class="btn">
+                  <span>Buy Now</span>
+                  <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+            </div>
+            <div class="feature-wrapper">
+              <div class="feature-box">
+                <span class="feature-index">01</span>
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                    <line x1="4" y1="19" x2="4" y2="10"/>
+                    <line x1="9.5" y1="19" x2="9.5" y2="5"/>
+                    <line x1="15" y1="19" x2="15" y2="13"/>
+                    <line x1="20.5" y1="19" x2="20.5" y2="8"/>
+                  </svg>
+                </div>
+                <div class="feature-name">Crystal-Clear Audio</div>
+                <div class="feature-detail">
+                  Titanium-coated drivers reproduce sub-bass rumble to airy
+                  top-end without smearing the mix in between.
+                </div>
+              </div>
+              <div class="feature-box">
+                <span class="feature-index">02</span>
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 13.5v-1.5a8 8 0 0 1 16 0v1.5"/>
+                    <rect x="2" y="13.5" width="5" height="7" rx="2"/>
+                    <rect x="17" y="13.5" width="5" height="7" rx="2"/>
+                  </svg>
+                </div>
+                <div class="feature-name">All-Day Comfort</div>
+                <div class="feature-detail">
+                  A 92-gram frame and memory-foam cushions mean you'll forget
+                  you're wearing them by hour three.
+                </div>
+              </div>
+              <div class="feature-box">
+                <span class="feature-index">03</span>
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M17 6H7a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3Z"/>
+                    <line x1="22" y1="10.5" x2="22" y2="13.5"/>
+                    <path d="M12.5 9 10 13h2.4L11 16l3.5-4.5h-2.4Z" fill="currentColor" stroke="none"/>
+                  </svg>
+                </div>
+                <div class="feature-name">40+ Hour Battery Life</div>
+                <div class="feature-detail">
+                  One charge outlasts your workweek. Ten minutes on the cable
+                  buys you three more hours.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="section3">
+            <div class="heading marquee">
+              <div class="marquee-track">
+                <div class="marquee-group">
+                  <span>Masterbeat</span>
+                  <span class="dot">&bull;</span>
+                  <span class="outline">Immersive</span>
+                  <span class="dot">&bull;</span>
+                  <span>Unforgettable</span>
+                  <span class="dot">&bull;</span>
+                </div>
+                <div class="marquee-group" aria-hidden="true">
+                  <span>Masterbeat</span>
+                  <span class="dot">&bull;</span>
+                  <span class="outline">Immersive</span>
+                  <span class="dot">&bull;</span>
+                  <span>Unforgettable</span>
+                  <span class="dot">&bull;</span>
+                </div>
+              </div>
+            </div>
+            <div class="content-wrapper">
+              <video width="100%"
+                height="auto"
+                autoplay loop muted class="radius">
+                <source src="./assets/images/video.mp4" type="video/mp4" />
+              </video>
+              <div class="content">
+                 <p>
+                  Masterbeat isn't tuned for a spec sheet — it's tuned for the
+                  drop. Highs stay crisp above the noise, lows hit like they're
+                  supposed to, and nothing gets lost when the track builds.
+                </p>
+                <p>
+                  Switch from a focus playlist to a workout mix and the sound
+                  keeps up — tight and controlled at low volume, full and
+                  physical when you push it. This is what a soundtrack should
+                  feel like.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div id="section4">
+            <img src="./assets/images/img1.jpeg" alt="" srcset="" class="img1 radius">
+            <img src="./assets/images/img2.jpeg" alt="" srcset="" class="img2 radius">
+            <img src="./assets/images/img3.jpeg" alt="" srcset="" class="img3 radius">
+          </div>
+
+          <div id="section5">
+            <div class="kicker kicker-center">Choose Your Fit</div>
+            <h2 class="heading heading-underline heading-underline-center"><span>Top</span> <span class="outline">Picks</span></h2>
+            <div class="product-section">
+              <div class="product">
+                <img src="./assets/images/green.png" alt="">
+                <div class="name">Audira One</div>
+                <div class="price">₹4,499</div>
+              </div>
+              <div class="product">
+                <div class="name">Audira Plus</div>
+                <div class="price">₹7,499</div>
+              </div>
+              <div class="product">
+                <img src="./assets/images/black.png" alt="">
+                <div class="name">Audira Max Pro</div>
+                <div class="price">₹11,499</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="section6" class="w-full">
+          <img src="./assets/images/img4.jpg" class="radius" alt="" srcset="">
+          <div class="content-wrapper">
+            <div class="kicker">Everyday Carry</div>
+            <h2 class="heading heading-underline">Pure Escape</h2>
+             <p>
+              Close the laptop, put these on, and the open-plan office
+              disappears. <strong>Active noise cancellation</strong> isn't a
+              checkbox feature here — it's the whole point.
+            </p>
+            <p>
+              Commute, workout, or wind down — one pair, zero compromises.
+              Wear them all day. Forget they're there.
+            </p>
+          </div>
+
+        </div>
+
+        <footer class="w-full">
+            <div class="footer-top">
+              <div class="footer-brand">
+                <div class="logo" role="img" aria-label="Audira"></div>
+                <p class="footer-tagline">Premium sound, engineered for everyday carry.</p>
+              </div>
+              <div class="social">
+                <a href="" class="social-icon" aria-label="Facebook">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M14.5 8.5H16V6h-1.5C12.6 6 11 7.6 11 9.5V11H9v3h2v6h3v-6h2.1l.4-3H14v-1c0-.6.4-1 1-1z"/>
+                  </svg>
+                </a>
+                <a href="" class="social-icon" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <span>&copy; 2026 Audira. All rights reserved.</span>
+              <span>Designed for the sound of now.</span>
+            </div>
+        </footer>
+
+      </div>
+    </div>
+
+    <!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <!-- local js -->
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
